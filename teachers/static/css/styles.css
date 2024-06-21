@@ -1,0 +1,153 @@
+/* Modern CSS reset */
+* {
+    margin: 0;
+    padding: 0;
+    color: #000;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, #000080, #430066); /* Gradient background */
+    color: #222; /* Dark color for better contrast */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 123, 255, 0.3), 0 0 20px rgba(0, 51, 153, 0.2); /* Inner and outer shadows */
+}
+
+/* Header styles */
+header {
+    background: url("https://css-tricks.com/holographic-trading-card-effect/"); /* Replace with holographic background image */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    border-radius: 50px 50px 0 0; /* Hexagon shape with rounded corners (top) */
+}
+
+.icon {
+    width: 60px;
+    height: 60px;
+    vertical-align: middle;
+    margin-right: 10px;
+    animation: pulse 1.5s infinite ease-in-out; /* Add subtle pulse animation (adjust as needed) */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+header h1 {
+    font-size: 24px;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 0;
+}
+
+/* Teacher Management System line color */
+header .tm-system {
+    color: #000; /* Black color for "Teacher Management System" */
+}
+
+/* Navigation Styles */
+nav {
+    background-color: rgba(240, 240, 240, 0.8);
+    padding: 10px 0;
+    text-align: center;
+    border-radius: 0 0 50px 50px; /* Hexagon shape with rounded corners (bottom) */
+    background-image: linear-gradient(to bottom right, rgba(221, 221, 221, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%); /* Diagonal grid pattern */
+}
+
+.menu {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* Styling for buttons with hover color adjustment for better contrast */
+.menu button {
+    background-color: #007bff;
+    color: #fff; /* White text for primary button background */
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative; /* For button shine effect */
+    overflow: hidden; /* Hide shine overflow */
+    transition: transform 0.2s;
+}
+
+.menu button:before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background-color: rgba(255, 255, 255, 0.2); /* Button shine */
+    border-radius: 50%;
+    transition: transform 0.6s, opacity 0.6s;
+    z-index: 0;
+    transform: translate(-25%, -25%);
+    mix-blend-mode: overlay;
+}
+
+.menu button:hover:before {
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+.menu button span {
+    position: relative;
+    z-index: 1;
+}
+
+.menu button:hover {
+    transform: scale(1.1); /* Scale up on hover */
+}
+
+/* Main content styles */
+main.content {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Footer styles */
+footer {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    border-radius: 8px;
+    margin-top: 20px;
+    clear: both;
+}
+
+footer p {
+    margin-bottom: 0;
+}
